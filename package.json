@@ -1,0 +1,33 @@
+{
+  "name": "@ldb/luminet-connection-string",
+  "version": "0.0.1",
+  "description": "Luminet System Connection String",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "repl": "ts-node --experimentalSpecifierResolution=node --transpileOnly --interactive",
+    "clean:rm": "rm -rf node_modules && rm package-lock.json || true",
+    "clean": "npm run clean:rm && npm install",
+    "build": "rm -rf lib && tsc -p src",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git3.nexdev.net/l1/database/luminet-bi.git"
+  },
+  "author": {
+    "name": "Billy Bùi",
+    "email": "billy.bui@luminet.vn"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@ldb/db-common": "1.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "typescript": "^4.8.4"
+  }
+}
