@@ -1,7 +1,7 @@
 {
-  "name": "@ldb/luminet-connection-string",
-  "version": "0.0.1",
-  "description": "Luminet System Connection String",
+  "name": "@ldb/luminet-connection-strings",
+  "version": "0.0.2",
+  "description": "Luminet System Connection Strings",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {

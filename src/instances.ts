@@ -8,8 +8,8 @@ export interface SystemConfig {
   t   : InstanceType;
 };
 
-type InstanceConfig = Partial<Record<InstanceName, SystemConfig>>;
-type InstanceConnection = Partial<Record<InstanceName, ConnectionString>>;
+type InstanceConfig = Record<InstanceName, SystemConfig>;
+type InstanceConnection = Record<InstanceName, ConnectionString>;
 
 export const InstanceConfigs: InstanceConfig = {
   L1Local   : { env: 'local', l: 1, i: 0, t: States.ACTIVE & States.ARCHIVE },
@@ -61,7 +61,7 @@ export const InstanceConnections: InstanceConnection = {
  * @param i 
  * @returns 
  */
-export function getInstanceConfigs(env?: ENV, t?: InstanceType, l?: L, i?: number): InstanceConfig {
+export function getInstanceConfigs(env?: ENV, t?: InstanceType, l?: L, i?: number): Partial<InstanceConfig> {
   return Object.fromEntries(Object.entries(InstanceConfigs).filter((config) => {
     const filterEnv = (env != null) ? (config[1].env === env ) : true;
     const filterI   = (i   != null) ? (config[1].i   === i   ) : true;
@@ -78,7 +78,7 @@ export function getInstanceConfigs(env?: ENV, t?: InstanceType, l?: L, i?: numbe
  * @param i 
  * @returns 
  */
-export function getInstanceConnections(env?: ENV, t?: InstanceType, l?: L, i?: number): InstanceConnection {
+export function getInstanceConnections(env?: ENV, t?: InstanceType, l?: L, i?: number): Partial<InstanceConnection> {
   const configs = getInstanceConfigs(env, t, l, i);
   return Object.fromEntries(Object.entries(InstanceConnections).filter((conn) => {
     return Object.keys(configs).includes(conn[0]);
