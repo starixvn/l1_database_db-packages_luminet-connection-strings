@@ -7,6 +7,6 @@ export { InstanceConfigs, InstanceConnections };
 
 export { Instances };
 
-export { States, InstanceType, ENV, InstanceName, L };
+export { ENV, InstanceName, InstanceType, L, States };
 
 export default Instances;

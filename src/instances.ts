@@ -12,18 +12,18 @@ type InstanceConfig = Record<InstanceName, SystemConfig>;
 type InstanceConnection = Record<InstanceName, ConnectionString>;
 
 export const InstanceConfigs: InstanceConfig = {
-  L1Local   : { env: 'local', l: 1, i: 0, t: States.ACTIVE & States.ARCHIVE },
-  L1Local1  : { env: 'local', l: 1, i: 1, t: States.ACTIVE & States.ARCHIVE },
-  L1Local2  : { env: 'local', l: 1, i: 2, t: States.ACTIVE & States.ARCHIVE },
-  L1Local3  : { env: 'local', l: 1, i: 3, t: States.ACTIVE & States.ARCHIVE },
-  L2Local   : { env: 'local', l: 2, i: 0, t: States.ACTIVE & States.ARCHIVE },
-  L2Local1  : { env: 'local', l: 2, i: 1, t: States.ACTIVE & States.ARCHIVE },
+  L1Local   : { env: 'local', l: 1, i: 0, t: States.ACTIVE | States.ARCHIVE },
+  L1Local1  : { env: 'local', l: 1, i: 1, t: States.ACTIVE | States.ARCHIVE },
+  L1Local2  : { env: 'local', l: 1, i: 2, t: States.ACTIVE | States.ARCHIVE },
+  L1Local3  : { env: 'local', l: 1, i: 3, t: States.ACTIVE | States.ARCHIVE },
+  L2Local   : { env: 'local', l: 2, i: 0, t: States.ACTIVE | States.ARCHIVE },
+  L2Local1  : { env: 'local', l: 2, i: 1, t: States.ACTIVE | States.ARCHIVE },
 
-  L1_SIT    : { env: 'sit'  , l: 1, i: 0, t: States.ACTIVE & States.ARCHIVE },
-  L2_SIT    : { env: 'sit'  , l: 2, i: 0, t: States.ACTIVE & States.ARCHIVE },
+  L1_SIT    : { env: 'sit'  , l: 1, i: 0, t: States.ACTIVE | States.ARCHIVE },
+  L2_SIT    : { env: 'sit'  , l: 2, i: 0, t: States.ACTIVE | States.ARCHIVE },
 
-  L1_UAT    : { env: 'uat'  , l: 1, i: 0, t: States.ACTIVE & States.ARCHIVE },
-  L2_UAT    : { env: 'uat'  , l: 2, i: 0, t: States.ACTIVE & States.ARCHIVE },
+  L1_UAT    : { env: 'uat'  , l: 1, i: 0, t: States.ACTIVE | States.ARCHIVE },
+  L2_UAT    : { env: 'uat'  , l: 2, i: 0, t: States.ACTIVE | States.ARCHIVE },
 
   L1_PRO    : { env: 'prod' , l: 1, i: 0, t: States.ACTIVE },
   L2_PRO    : { env: 'prod' , l: 2, i: 0, t: States.ACTIVE },
