@@ -1,6 +1,6 @@
 {
   "name": "@ldb/luminet-connection-strings",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Luminet System Connection Strings",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -21,7 +21,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@ldb/db-common": "1.1.4"
+    "@ldb/db-common": "1.1.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.40.1",

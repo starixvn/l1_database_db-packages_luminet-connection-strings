@@ -38,8 +38,8 @@ export const InstanceConnections: InstanceConnection = {
   L1Local1  : DBHelper.getConnectionString('mongodb://10.10.50.12:39101,10.10.50.13:39101,10.10.50.14:39101/?replicaSet=L1pLocal'),
   L1Local2  : DBHelper.getConnectionString('mongodb://10.10.50.12:39102,10.10.50.13:39102,10.10.50.14:39102/?replicaSet=L1ppLocal'),
   L1Local3  : DBHelper.getConnectionString('mongodb://10.10.50.12:39103,10.10.50.13:39103,10.10.50.14:39103/?replicaSet=L1pppLocal'),
-  L2Local   : DBHelper.getConnectionString('mongodb://10.10.50.12:39100,10.10.50.13:39100,10.10.50.14:39100/?replicaSet=L2Local'),
-  L2Local1  : DBHelper.getConnectionString('mongodb://10.10.50.12:39101,10.10.50.13:39101,10.10.50.14:39101/?replicaSet=L2pLocal'),
+  L2Local   : DBHelper.getConnectionString('mongodb://10.10.50.12:39200,10.10.50.13:39200,10.10.50.14:39200/?replicaSet=L2Local'),
+  L2Local1  : DBHelper.getConnectionString('mongodb://10.10.50.12:39201,10.10.50.13:39201,10.10.50.14:39201/?replicaSet=L2pLocal'),
 
   L1_SIT    : DBHelper.getConnectionString('mongodb://10.99.99.187:27301/?replicaSet=SabaSIT'),
   L2_SIT    : DBHelper.getConnectionString('mongodb://10.99.99.187:37301/?replicaSet=SabaL2SIT'),
